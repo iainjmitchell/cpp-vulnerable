@@ -1,0 +1,7 @@
+[
+    {
+      "directory": ".",
+      "command": "g++ -c vulnerable_app.cpp -o vulnerable_app.o",
+      "file": "vulnerable_app.cpp"
+    }
+  ]
