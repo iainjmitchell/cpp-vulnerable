@@ -28,7 +28,7 @@ void use_after_free() {
     std::cout << "Stale data value: " << *data << std::endl; 
 }
 
-// CWE-476: NULL Pointer Dereference
+// CWE-476: NULL Pointer Dereference - Null value carrier
 void null_deref(int* ptr) {
     if (*ptr > 0) { 
         std::cout << "Value is positive" << std::endl;
