@@ -28,6 +28,19 @@ void use_after_free() {
     std::cout << "Stale data value: " << *data << std::endl; 
 }
 
+// Adding to see how the insertion of the stack trace affects the finding identity
+void print_stack_trace() {
+    void* array[10];
+    size_t size;
+    char** strings;
+    size = backtrace(array, 10);
+    strings = backtrace_symbols(array, size);
+    for (size_t i = 0; i < size; i++) {
+        std::cout << strings[i] << std::endl;
+    }
+    free(strings);
+}
+
 // CWE-476: NULL Pointer Dereference - Null value carrier
 void null_deref(int* ptr) {
     if (*ptr > 0) { 
