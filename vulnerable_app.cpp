@@ -43,7 +43,7 @@ void print_stack_trace() {
 
 // CWE-476: NULL Pointer Dereference - Null value carrier
 void null_deref(int* ptr) {
-    if (*ptr > 0) { 
+    if ( *ptr > 0 ) { 
         std::cout << "Value is positive" << std::endl;
     }
 }
